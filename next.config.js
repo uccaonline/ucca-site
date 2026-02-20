@@ -1,15 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Required for Cloudflare Pages static export
-  output: 'export',
-  
-  // Disable image optimization (not supported in static export)
+  // Keep trailingSlash if you like the URLs with / (optional)
+  trailingSlash: true,
+
+  // Leave unoptimized for now (safe). We can revisit images later.
   images: {
     unoptimized: true,
   },
-  
-  // Trailing slash for better Cloudflare Pages compatibility
-  trailingSlash: true,
 };
 
 module.exports = nextConfig;
+
+// Enables Cloudflare bindings/dev behavior in local dev when using OpenNext.
+const { initOpenNextCloudflareForDev } = require("@opennextjs/cloudflare");
+initOpenNextCloudflareForDev();
