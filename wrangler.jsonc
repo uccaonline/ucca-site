@@ -9,5 +9,17 @@
     "binding": "ASSETS"
   },
   "workers_dev": true,
-  "preview_urls": true
+  "preview_urls": true,
+  "routes": [
+    {
+      "pattern": "ucca.online",
+      "zone_name": "ucca.online",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.ucca.online",
+      "zone_name": "ucca.online",
+      "custom_domain": true
+    }
+  ]
 }
