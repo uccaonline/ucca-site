@@ -8,14 +8,6 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
-  "routes": [
-    {
-      "pattern": "ucca.online/*",
-      "zone_name": "ucca.online"
-    },
-    {
-      "pattern": "www.ucca.online/*",
-      "zone_name": "ucca.online"
-    }
-  ]
+  "workers_dev": true,
+  "preview_urls": true
 }
