@@ -17,3 +17,74 @@ body {
 button {
   font-family: inherit;
 }
+
+/* =========================
+   UCCA responsive fixes
+   ========================= */
+
+/* Better mobile viewport behavior (address bar safe) */
+.uccaHero {
+  min-height: 100vh;
+}
+@supports (height: 100dvh) {
+  .uccaHero {
+    min-height: 100dvh;
+  }
+}
+
+/* Keep fixed header from clipping on narrow widths */
+@media (max-width: 860px) {
+  .uccaNav {
+    padding: 12px 16px !important;
+    flex-wrap: wrap;
+  }
+
+  .uccaNavActions {
+    width: 100%;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .uccaHeroGrid {
+    grid-template-columns: 1fr !important;
+    padding: 104px 16px 56px !important;
+    gap: 18px !important;
+  }
+
+  .uccaHeroAside {
+    margin-top: 8px;
+  }
+
+  .uccaHeroMiniGrid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .ucca2col {
+    grid-template-columns: 1fr !important;
+  }
+
+  .uccaMarkets {
+    grid-template-columns: 1fr !important;
+  }
+
+  .ucca3col {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .uccaLogoBox {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .uccaBtn {
+    padding: 10px 12px !important;
+    font-size: 12px !important;
+    border-radius: 12px !important;
+  }
+
+  .uccaHeroVisual {
+    min-height: 180px !important;
+  }
+}
